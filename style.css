@@ -1,0 +1,217 @@
+/* General Body and Font Styling */
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #e0e0e0; /* Light grey background for the page itself */
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+}
+
+/* The main container that looks like a piece of paper */
+.resume-container {
+    display: flex;
+    max-width: 900px;
+    margin: 20px auto;
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border: 1px solid #ccc;
+}
+
+/* Left Column Styling (Dark Background) */
+.left-column {
+    flex: 0 0 35%;
+    background-color: #2c3e50; /* Dark blue-grey color from the image */
+    color: #ecf0f1; /* Light grey/off-white text color */
+    padding: 30px 25px;
+}
+
+.sum{
+    text-align: justify;
+}
+
+.profile-pic {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 4px solid #34495e;
+    display: block;
+    margin: 0 auto 15px;
+    object-fit: cover;
+}
+
+.left-column .header-text {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.left-column h1 {
+    font-size: 1.6em;
+    margin: 0;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.left-column h2 {
+    font-size: 1em;
+    margin-top: 5px;
+    font-weight: 400;
+    color: #bdc3c7; /* Lighter grey for subtitle */
+}
+
+.contact-info {
+    margin-bottom: 30px;
+}
+
+.contact-info p {
+    margin-bottom: 12px;
+    font-size: 0.9em;
+    display: flex;
+    align-items: center;
+}
+
+.contact-info i {
+    width: 25px; /* Fixed width for icon alignment */
+    margin-right: 10px;
+    color: #95a5a6; /* Icon color */
+    text-align: center;
+}
+
+.skills h3 {
+    text-transform: uppercase;
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #7f8c8d;
+    padding-bottom: 5px;
+}
+
+.skill-category {
+    margin-bottom: 15px;
+}
+
+.skill-category h4 {
+    margin: 0 0 5px 0;
+    font-size: 1em;
+    font-weight: 700;
+}
+
+.skill-category p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #bdc3c7;
+}
+
+/* Right Column Styling (White Background) */
+.right-column {
+    flex: 1;
+    padding: 30px 40px;
+}
+
+.right-column section {
+    margin-bottom: 25px;
+}
+
+.right-column h3 {
+    text-transform: uppercase;
+    font-size: 1.2em;
+    color: #2c3e50;
+    border-bottom: 2px solid #bdc3c7;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+.right-column p {
+    font-size: 0.95em;
+    color: #555;
+}
+
+.job {
+    margin-bottom: 25px;
+}
+
+.job h4 {
+    font-size: 1.1em;
+    margin: 0;
+    font-weight: 700;
+}
+
+.job-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9em;
+    color: #777;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.right-column ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 0;
+}
+
+.right-column li {
+    margin-bottom: 8px;
+    font-size: 0.95em;
+    color: #555;
+}
+
+/* Download Button Styling */
+#download-pdf-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #27ae60;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: background-color 0.3s, transform 0.2s;
+    z-index: 1000;
+}
+
+#download-pdf-btn:hover {
+    background-color: #2ecc71;
+    transform: translateY(-2px);
+}
+
+#download-pdf-btn i {
+    margin-right: 8px;
+}
+
+/* Print-specific styles */
+@media print {
+    body {
+        background-color: #fff;
+        padding: 0;
+        margin: 0;
+    }
+    .resume-container {
+        display: flex;
+        flex-direction: row;
+        box-shadow: none;
+        border: none;
+        margin: 0;
+        max-width: 100%;
+    }
+    #download-pdf-btn {
+        display: none; /* Hide the button when printing */
+    }
+}
+
+/* Add this to the end of your style.css file */
+
+.contact-info a {
+    color: inherit; /* This makes the link inherit the light text color */
+    text-decoration: none; /* This removes the default underline */
+    transition: color 0.3s;
+}
+
+.contact-info a:hover {
+    color: #ffffff; /* Make it slightly brighter on hover */
+    text-decoration: underline; /* Add underline on hover for better UX */
+}
