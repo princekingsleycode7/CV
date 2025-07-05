@@ -215,3 +215,62 @@ body {
     color: #ffffff; /* Make it slightly brighter on hover */
     text-decoration: underline; /* Add underline on hover for better UX */
 }
+
+/* ========================================= */
+/*          RESPONSIVE DESIGN (MOBILE)       */
+/* ========================================= */
+
+/* This media query targets screens 768px wide or smaller */
+@media (max-width: 768px) {
+
+    /* Allow the body to take up the full screen width */
+    body {
+        padding: 0;
+    }
+
+    /* Stack the columns vertically instead of side-by-side */
+    .resume-container {
+        flex-direction: column;
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        box-shadow: none; /* Remove shadow on mobile */
+        border: none;     /* Remove border on mobile */
+    }
+
+    /* Make both columns take up the full width */
+    .left-column, .right-column {
+        flex: 1 1 100%; /* Allow columns to be full width */
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    
+    /* Make the profile picture a bit smaller on mobile */
+    .profile-pic {
+        width: 110px;
+        height: 110px;
+    }
+    
+    .left-column h1 {
+        font-size: 1.4em;
+    }
+
+    /* Stack the job title/date to prevent them from squishing together */
+    .job-meta {
+        flex-direction: column;
+        align-items: flex-start; /* Align items to the left */
+        margin-bottom: 15px;
+    }
+    
+    .job-meta span {
+        margin-bottom: 5px;
+    }
+
+    /* Adjust the download button for smaller screens */
+    #download-pdf-btn {
+        padding: 10px 15px;
+        font-size: 14px;
+        top: 10px;
+        right: 10px;
+    }
+}
